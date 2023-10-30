@@ -14,6 +14,7 @@ var is_ball_started = false
 @onready var collision_shape = $CollisionShape2D
 
 func _ready():
+	ball.life_lost.connect(on_ball_lost)
 	camera_rect = camera.get_viewport_rect()
 	half_paddle_width = collision_shape.shape.get_rect().size.x / 2 * scale.x
 
@@ -40,5 +41,9 @@ func _input(_ev):
 	if direction != Vector2.ZERO and !is_ball_started:
 		ball.start_ball()
 		is_ball_started = true
-		pass
+
+
+func on_ball_lost():
+	is_ball_started = false
+	direction = Vector2.ZERO
 

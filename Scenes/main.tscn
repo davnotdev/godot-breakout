@@ -8,6 +8,8 @@
 
 [node name="Main" type="Node"]
 
+[node name="UI" parent="." instance=ExtResource("5_bokiy")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Paddle" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_e6hjh")]
@@ -43,5 +45,3 @@ freeze = true
 
 [node name="DeathZone" parent="." instance=ExtResource("4_gx53p")]
 position = Vector2(-18, 322)
-
-[node name="UI" parent="." instance=ExtResource("5_bokiy")]
