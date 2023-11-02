@@ -25,14 +25,18 @@ func spawn():
 	var brick_size = test_brick.get_size()
 	test_brick.queue_free()
 
-	var start_x = spawn_start.position.x - brick_size.x * (ROWS / 2) - floorf(ROWS / 2) * margin.x
+	var start_x = (
+		spawn_start.position.x - brick_size.x * (ROWS / 2.0) - floorf(ROWS / 2.0) * margin.x
+	)
 
 	for i in COLUMNS:
 		for j in ROWS:
 			var brick = brick_scene.instantiate() as Brick
 			add_child(brick)
 			brick.set_level(COLUMNS - i)
-			brick.set_position(Vector2(start_x + margin.x * j, spawn_start.position.y + margin.y * i))
+			brick.set_position(
+				Vector2(start_x + margin.x * j, spawn_start.position.y + margin.y * i)
+			)
 			brick.brick_destroyed.connect(on_brick_destroyed)
 
 	# var row_width = brick_size.x * COLUMNS + margin.x * (COLUMNS - 1)
