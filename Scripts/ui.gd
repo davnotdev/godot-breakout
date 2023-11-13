@@ -17,3 +17,8 @@ func _on_game_over_button_pressed():
 func game_over():
 	game_lost_container.show()
 	pass
+
+
+func _on_level_won_button_pressed():
+	LevelDefinitions.current_level += 1
+	get_tree().reload_current_scene()

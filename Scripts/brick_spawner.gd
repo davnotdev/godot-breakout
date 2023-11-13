@@ -16,7 +16,7 @@ var brick_count = 0
 
 
 func _ready():
-	spawn()
+	spawn_from_definition(LevelDefinitions.level_2)
 
 
 func spawn():
@@ -46,7 +46,38 @@ func spawn():
 			brick.brick_destroyed.connect(on_brick_destroyed)
 
 
+func spawn_from_definition(level_definition):
+	var test_brick = brick_scene.instantiate() as Brick
+	add_child(test_brick)
+	var brick_size = test_brick.get_size() * 4
+	test_brick.queue_free()
+
+	var rows = level_definition.size()
+	var columns = level_definition[0].size()
+
+	for i in rows:
+		for j in columns:
+			if level_definition[i][j] != 0:
+				var start_x = (
+					spawn_start.position.x
+					- brick_size.x * (columns / 2.0)
+					- margin.x * (columns / 2.0)
+					+ brick_size.x / 2.0
+				)
+				var brick = brick_scene.instantiate() as Brick
+				add_child(brick)
+				brick.set_level(level_definition[i][j])
+				brick.set_position(
+					Vector2(
+						start_x + (margin.x + brick_size.x) * j,
+						spawn_start.position.y + (margin.y + brick_size.y) * i
+					)
+				)
+				brick.brick_destroyed.connect(on_brick_destroyed)
+	
+
 func on_brick_destroyed():
 	brick_count -= 1
 	if brick_count == 0:
 		ball.stop_ball()
+		ui.on_level_won()
