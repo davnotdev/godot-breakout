@@ -34,9 +34,14 @@ func _physics_process(delta):
 	if collider is Brick:
 		collider.decrease_level()
 
+	if collider is Paddle:
+		Sound.get_paddle_hit().play()
+
+	#  I don't remember if this conditional works.
 	if collider is Brick or collider is Paddle:
 		ball_collision(collider)
 	else:
+		Sound.get_wall_hit().play()
 		velocity = velocity.bounce(collision.get_normal())
 
 
@@ -50,8 +55,10 @@ func start_ball():
 func on_life_lost():
 	lifes -= 1
 	if lifes == 0:
+		Sound.get_game_lost().play()
 		ui.game_over()
 	else:
+		Sound.get_life_lost().play()
 		life_lost.emit()
 		reset_ball()
 	ui.set_lifes(lifes)
