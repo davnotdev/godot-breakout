@@ -1,34 +1,34 @@
 [gd_scene load_steps=9 format=3 uid="uid://snqur2bat0gb"]
 
 [ext_resource type="Script" path="res://Scripts/sound.gd" id="1_u14cn"]
-[ext_resource type="AudioStream" uid="uid://bxs4epxol52a2" path="res://Assets/Sounds/brick_hit.mp3" id="2_ghmj5"]
-[ext_resource type="AudioStream" uid="uid://b37ltfpna0sk8" path="res://Assets/Sounds/game_lost.mp3" id="3_p1pe8"]
-[ext_resource type="AudioStream" uid="uid://bf0p5ubyb48ti" path="res://Assets/Sounds/game_won.mp3" id="4_tk255"]
-[ext_resource type="AudioStream" uid="uid://bq16od4kjrdco" path="res://Assets/Sounds/level_passed.mp3" id="5_slsv3"]
-[ext_resource type="AudioStream" uid="uid://22auq7yq0rh6" path="res://Assets/Sounds/life_lost.mp3" id="6_p876t"]
-[ext_resource type="AudioStream" uid="uid://b37o7xwltn2g3" path="res://Assets/Sounds/paddle_hit.mp3" id="7_r4ogv"]
-[ext_resource type="AudioStream" uid="uid://d1wji7b44x25y" path="res://Assets/Sounds/wall_hit.mp3" id="8_ujavu"]
+[ext_resource type="AudioStream" uid="uid://dx881c45f4aor" path="res://Assets/Sounds/brick hit.mp3" id="2_pelgk"]
+[ext_resource type="AudioStream" uid="uid://3o17rlvei03q" path="res://Assets/Sounds/game lost.mp3" id="3_7jwt2"]
+[ext_resource type="AudioStream" uid="uid://de5ydgy5bd35k" path="res://Assets/Sounds/win level 3.mp3" id="3_rdm3l"]
+[ext_resource type="AudioStream" uid="uid://cslxwpw7jqijh" path="res://Assets/Sounds/win level.mp3" id="4_fs8rk"]
+[ext_resource type="AudioStream" uid="uid://dkxl3we08p8rr" path="res://Assets/Sounds/life lost.mp3" id="5_nx6rf"]
+[ext_resource type="AudioStream" uid="uid://c7ihnpf77dqs2" path="res://Assets/Sounds/paddle hit.mp3" id="6_5tfuo"]
+[ext_resource type="AudioStream" uid="uid://btmyd1xnreg5d" path="res://Assets/Sounds/wall hit.mp3" id="7_1hlni"]
 
 [node name="Sounds" type="Node"]
 script = ExtResource("1_u14cn")
 
 [node name="BrickHit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_ghmj5")
+stream = ExtResource("2_pelgk")
 
 [node name="GameLost" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_p1pe8")
+stream = ExtResource("3_7jwt2")
 
 [node name="GameWon" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_tk255")
+stream = ExtResource("3_rdm3l")
 
 [node name="LevelPassed" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_slsv3")
+stream = ExtResource("4_fs8rk")
 
 [node name="LifeLost" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_p876t")
+stream = ExtResource("5_nx6rf")
 
 [node name="PaddleHit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_r4ogv")
+stream = ExtResource("6_5tfuo")
 
 [node name="WallHit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_ujavu")
+stream = ExtResource("7_1hlni")

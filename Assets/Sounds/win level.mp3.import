@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cslxwpw7jqijh"
+path="res://.godot/imported/win level.mp3-0a3c1f78e54b4738779dfa66acfd51f5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/win level.mp3"
+dest_files=["res://.godot/imported/win level.mp3-0a3c1f78e54b4738779dfa66acfd51f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

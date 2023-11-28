@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkxl3we08p8rr"
+path="res://.godot/imported/life lost.mp3-2a93e0142720804c70540103375297d0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/life lost.mp3"
+dest_files=["res://.godot/imported/life lost.mp3-2a93e0142720804c70540103375297d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
