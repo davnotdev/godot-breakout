@@ -79,7 +79,6 @@ func spawn_from_definition(level_definition):
 
 func on_brick_destroyed():
 	brick_count -= 1
-	Sound.get_brick_hit().play()
 	if brick_count == 0:
 		Sound.get_level_passed().play()
 		ball.reset_ball()
