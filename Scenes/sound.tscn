@@ -14,6 +14,7 @@ script = ExtResource("1_u14cn")
 
 [node name="BrickHit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_pelgk")
+volume_db = 20.8
 
 [node name="GameLost" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7jwt2")

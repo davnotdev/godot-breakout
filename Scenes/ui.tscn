@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://b4pqfbvte11k6" path="res://Assets/VT323-Regular.ttf" id="2_pa1mr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaw21"]
-bg_color = Color(0.45098, 0.4, 0.152941, 1)
+bg_color = Color(0.74902, 0, 0.172549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3f1f"]
 bg_color = Color(0.141176, 0.713726, 0.388235, 1)
