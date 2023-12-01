@@ -8,6 +8,7 @@ var level = 1
 
 @onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
+@onready var crumble_effect: CrumbleEffect = $CrumbleEffect
 
 var sprites: Array[Texture2D] = [
 	preload("res://Assets/Brick-Yellow.png"),
@@ -29,6 +30,7 @@ func set_level(new_level: int):
 
 
 func decrease_level():
+	crumble_effect.crumble()
 	if level > 1:
 		set_level(level - 1)
 	else:

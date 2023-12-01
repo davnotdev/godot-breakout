@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp2tvd3o7vgvv"]
+[gd_scene load_steps=5 format=3 uid="uid://dp2tvd3o7vgvv"]
 
 [ext_resource type="Texture2D" uid="uid://d06ws4g0pu0q0" path="res://Assets/Brick-Blue.png" id="1_52eiq"]
 [ext_resource type="Script" path="res://Scripts/brick.gd" id="1_tu1fq"]
+[ext_resource type="PackedScene" uid="uid://i1pn6t3llc10" path="res://Scenes/crumble_effect.tscn" id="3_2122b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2ok7"]
 size = Vector2(96, 32)
@@ -19,3 +20,5 @@ texture = ExtResource("1_52eiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i2ok7")
+
+[node name="CrumbleEffect" parent="." instance=ExtResource("3_2122b")]
