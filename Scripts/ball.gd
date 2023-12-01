@@ -49,7 +49,6 @@ func _physics_process(delta):
 		ball_collision(collider)
 	else:
 		Sound.get_wall_hit().play()
-		print("e", collider)
 		velocity = velocity.bounce(collision.get_normal())
 
 
