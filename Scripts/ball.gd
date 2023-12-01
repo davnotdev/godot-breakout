@@ -33,11 +33,12 @@ func _physics_process(delta):
 	var collider = collision.get_collider()
 	if collider is Brick:
 		if firstTime:
+			firstTime = false
 			return
-		firstTime = false
+		
 		
 		Sound.get_brick_hit().play()
-		print ("im gonna fyuckin doo it" , collider, collision, get_tree())
+		print ("im gonna fyuckin doo it " , collider, collision, get_tree())
 		collider.decrease_level()
 
 	if collider is Paddle:
