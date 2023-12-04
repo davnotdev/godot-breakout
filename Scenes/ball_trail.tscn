@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc4onilqy321o"]
+[gd_scene load_steps=7 format=3 uid="uid://dc4onilqy321o"]
 
 [ext_resource type="Texture2D" uid="uid://bwocab5os8fq2" path="res://Assets/WhiteCircle.png" id="1_n7j0o"]
 
+[sub_resource type="Curve" id="Curve_48ylf"]
+max_value = 100.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="CurveTexture" id="CurveTexture_i6d5e"]
+curve = SubResource("Curve_48ylf")
 
 [sub_resource type="Curve" id="Curve_fxlkh"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.506024, 0), 0.0, 0.0, 0, 0]
