@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4o6jyngfr5eb"]
+[gd_scene load_steps=10 format=3 uid="uid://c4o6jyngfr5eb"]
 
 [ext_resource type="PackedScene" uid="uid://d1h4dv4slas7y" path="res://Scenes/paddle.tscn" id="1_e6hjh"]
+[ext_resource type="Script" path="res://Scenes/screen_shaker.gd" id="2_dbty5"]
 [ext_resource type="PackedScene" uid="uid://ds318ftaxph5h" path="res://Scenes/ball.tscn" id="2_qnree"]
 [ext_resource type="PackedScene" uid="uid://bkqhdwhg1w5hn" path="res://Scenes/wall.tscn" id="3_c34fm"]
 [ext_resource type="PackedScene" uid="uid://bmkke4yk0gc7q" path="res://Scenes/death_zone.tscn" id="4_gx53p"]
@@ -17,6 +18,7 @@ loop = true
 [node name="UI" parent="." instance=ExtResource("5_bokiy")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_dbty5")
 
 [node name="Paddle" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_e6hjh")]
 position = Vector2(-2, 265)
@@ -61,6 +63,8 @@ spawn_start = NodePath("../BrickSpawnStart")
 [node name="BrickSpawnStart" type="Marker2D" parent="."]
 position = Vector2(0, -256)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamMP3_pw86u")
 autoplay = true
+
+[connection signal="wall_hit" from="Ball" to="Camera2D" method="_on_ball_wall_hit"]

@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name Ball
 
 signal life_lost
+signal wall_hit
 
 const VELOCITY_LIMIT = 25
 
@@ -50,6 +51,7 @@ func _physics_process(delta):
 	else:
 		Sound.get_wall_hit().play()
 		velocity = velocity.bounce(collision.get_normal())
+		wall_hit.emit()
 
 
 func start_ball():
