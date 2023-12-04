@@ -64,3 +64,5 @@ position = Vector2(0, -256)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamMP3_pw86u")
 autoplay = true
+
+[connection signal="level_won" from="UI" to="Ball" method="_on_ui_level_won"]

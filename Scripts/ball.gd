@@ -38,7 +38,6 @@ func _physics_process(delta):
 		
 		
 		Sound.get_brick_hit().play()
-		print ("im gonna fyuckin doo it " , collider, collision, get_tree())
 		collider.decrease_level()
 
 	if collider is Paddle:
@@ -99,3 +98,8 @@ func ball_collision(collider):
 
 	var speed_multiplier = speed_up_factor if collider is Paddle else 1.0
 	velocity = (new_velocity * speed_multiplier).limit_length(VELOCITY_LIMIT)
+
+
+
+func _on_ui_level_won():
+	lifes += 1
