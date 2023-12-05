@@ -12,6 +12,7 @@ var is_ball_started = false
 
 @onready var ball: Ball = $"../Ball"
 @onready var collision_shape = $CollisionShape2D
+@onready var crumble_effect = $CrumbleEffect
 
 func _ready():
 	ball.life_lost.connect(on_ball_lost)
@@ -50,3 +51,7 @@ func on_ball_lost():
 
 func get_width():
 	return collision_shape.shape.get_rect().size.x
+
+
+func _on_ball_paddle_hit():
+	crumble_effect.crumble()

@@ -4,6 +4,7 @@ class_name Ball
 
 signal life_lost
 signal wall_hit
+signal paddle_hit
 
 const VELOCITY_LIMIT = 25
 
@@ -42,6 +43,7 @@ func _physics_process(delta):
 		collider.decrease_level()
 
 	if collider is Paddle:
+		paddle_hit.emit()
 		Sound.get_paddle_hit().play()
 
 	#  I don't remember if this conditional works.

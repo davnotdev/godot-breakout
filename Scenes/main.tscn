@@ -67,4 +67,5 @@ position = Vector2(0, -256)
 stream = SubResource("AudioStreamMP3_pw86u")
 autoplay = true
 
+[connection signal="paddle_hit" from="Ball" to="Paddle" method="_on_ball_paddle_hit"]
 [connection signal="wall_hit" from="Ball" to="Camera2D" method="_on_ball_wall_hit"]
