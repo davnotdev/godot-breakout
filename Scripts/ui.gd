@@ -23,6 +23,7 @@ func game_over():
 
 func on_level_won():
 	if LevelDefinitions.current_level >= LevelDefinitions.levels.size():
+		Sound.get_game_won().play()
 		game_won_container.show()
 		return
 	
