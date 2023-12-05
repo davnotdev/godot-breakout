@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c4o6jyngfr5eb"]
 
 [ext_resource type="PackedScene" uid="uid://d1h4dv4slas7y" path="res://Scenes/paddle.tscn" id="1_e6hjh"]
-[ext_resource type="Script" path="res://Scenes/screen_shaker.gd" id="2_dbty5"]
+[ext_resource type="Script" path="res://Scripts/screen_shaker.gd" id="2_dbty5"]
 [ext_resource type="PackedScene" uid="uid://ds318ftaxph5h" path="res://Scenes/ball.tscn" id="2_qnree"]
 [ext_resource type="PackedScene" uid="uid://bkqhdwhg1w5hn" path="res://Scenes/wall.tscn" id="3_c34fm"]
 [ext_resource type="PackedScene" uid="uid://bmkke4yk0gc7q" path="res://Scenes/death_zone.tscn" id="4_gx53p"]
@@ -75,4 +75,5 @@ position = Vector2(0, -256)
 stream = SubResource("AudioStreamMP3_pw86u")
 autoplay = true
 
+[connection signal="paddle_hit" from="Ball" to="Paddle" method="_on_ball_paddle_hit"]
 [connection signal="wall_hit" from="Ball" to="Camera2D" method="_on_ball_wall_hit"]

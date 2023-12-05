@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1h4dv4slas7y"]
+[gd_scene load_steps=5 format=3 uid="uid://d1h4dv4slas7y"]
 
 [ext_resource type="Script" path="res://Scripts/paddle.gd" id="1_e2tdb"]
 [ext_resource type="Texture2D" uid="uid://ckbmlemetbql1" path="res://Assets/Paddle.png" id="1_y6vj1"]
+[ext_resource type="PackedScene" uid="uid://i1pn6t3llc10" path="res://Scenes/crumble_effect.tscn" id="3_fjuhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cbma"]
 size = Vector2(493, 58)
@@ -19,3 +20,5 @@ texture = ExtResource("1_y6vj1")
 position = Vector2(-0.5, 0)
 scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_6cbma")
+
+[node name="CrumbleEffect" parent="." instance=ExtResource("3_fjuhe")]
