@@ -9,7 +9,7 @@ signal paddle_hit
 const VELOCITY_LIMIT = 25
 
 @export var ball_speed = 18
-@export var lifes = 5
+@export var lifes = 10
 @export var death_zone: DeathZone
 @export var ui: UI
 
